@@ -6,3 +6,4 @@ class Solution:
             tmp+=i
             ans.append(tmp)
         return ans
+    

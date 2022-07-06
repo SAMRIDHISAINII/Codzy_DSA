@@ -1,22 +1,24 @@
-#include<iostream>
-using namespace std;
-// function for reverse string
-int main()
-{
-    string str;
-    cin>>str;
+// leetcode question number 344
 
-    string rev ="";
-    // input by user problem
-    // for loop
+// Example 1:
 
-    for(int i=str.length()-1; i>=0; i--)
-    {
-        rev=rev+str[i];
+// Input: s = ["h","e","l","l","o"]
+// Output: ["o","l","l","e","h"]
 
+// gfg question 
+// category Palindrome String easy
+
+class Solution {
+public:
+    void reverseString(vector<char>& s) {
+//         first to last approach
+        
+         int i = 0;
+        int j = s.size() - 1;
+        while(i < j){
+            swap(s[i], s[j]);
+            i++, j--;
+        }
+        
     }
-    cout<<str;
-
-    return 0;
-}
-
+};

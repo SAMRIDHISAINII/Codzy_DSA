@@ -5,8 +5,6 @@
 // Input: s = ["h","e","l","l","o"]
 // Output: ["o","l","l","e","h"]
 
-// gfg question 
-// category Palindrome String easy
 
 class Solution {
 public:

@@ -1,3 +1,6 @@
+// leetcode question number 1046
+// category easy
+
 class Solution {
 public:
     int lastStoneWeight(vector<int>& stones) {

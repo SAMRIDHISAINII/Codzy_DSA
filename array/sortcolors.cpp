@@ -1,0 +1,48 @@
+class Solution {
+public:
+    void sortColors(vector<int>& nums) {
+//         first solution we wil sort the array 
+        // o(nlogn)
+        
+        // we can optimize using counting sort
+//         in htis pass we will be many so 
+//         0(2n)
+        
+//         hence we need to pass
+//         so 
+    // we might need in one pass  
+//         dutch nathional flag algo
+        
+//         we need to see pointer
+        
+        // mid pointer low high
+        // so we need to check 
+        // when mid tell 0 
+//             swap
+        
+        // taking three condition in mind
+        // mid towards the right
+        
+        int low =0;
+            int high = nums.size()-1;
+        int mid =0;
+        
+        while(mid<=high){
+            // so using switch her
+            switch (nums[mid]){
+                case 0:
+                    swap(nums[low++], nums[mid++]);
+                    break;
+                    
+                    // now check like if element is 1
+                case 1:
+                    mid++;
+                    break;
+                    
+                case 2:
+                    swap(nums[mid], nums[high--]);
+                    break;
+            }
+        }
+    }
+};

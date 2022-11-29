@@ -24,6 +24,7 @@ public:
         
 		binaryTreePathsUtil(root->left, vec, str);
 		binaryTreePathsUtil(root->right, vec, str);
+// 		thoda sa update karle
 	}
 }
 

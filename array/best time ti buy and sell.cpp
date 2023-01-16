@@ -1,7 +1,7 @@
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
-//         optimize brute force approch
+
         
        int maxPro=0;
     int minPrice=INT_MAX;
@@ -12,4 +12,14 @@ public:
 return maxPro;
       
     }
-};
+// };
+
+// int maxProfit(vector<int>& prices) {
+//     int minPrice = INT_MAX;
+//     int maxProfit = 0;
+//     for (int i = 0; i < prices.size(); i++) {
+//         minPrice = min(minPrice, prices[i]);
+//         maxProfit = max(maxProfit, prices[i] - minPrice);
+//     }
+//     return maxProfit;
+// // }

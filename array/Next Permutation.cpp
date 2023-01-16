@@ -45,3 +45,54 @@ public:
         }
     }
 };
+
+
+Next permutation
+
+#include <iostream>  // Input/output stream
+#include <algorithm> // For the reverse() function
+#include <vector>    // For the vector data structure
+using namespace std;
+
+// Function to find the next permutation of the given array
+void nextPermutation(vector<int>& nums) {
+    int n = nums.size(); // Store the size of the array
+    int i = n - 2; // Start from the second last element
+    // Iterate from the end of the array and find the first element that is smaller than its next element
+    while (i >= 0 && nums[i] >= nums[i + 1]) {
+        i--;
+    }
+    // If such an element is not found, the array is already the largest possible permutation
+    // Reverse the entire array to get the smallest permutation
+    if (i >= 0) {
+        int j = n - 1;
+        // Find the first element from the end of the array that is larger than the element at index i
+        while (nums[j] <= nums[i]) {
+            j--;
+        }
+        // Swap the elements at index i and j
+        swap(nums[i], nums[j]);
+    }
+    // Reverse the subarray from index i+1 to the end of the array
+    reverse(nums.begin() + i + 1, nums.end());
+}
+
+int main() {
+    int n;
+    cin >> n; // Input the size of the array
+    vector<int> nums(n);
+    for (int i = 0; i < n; i++) {
+        cin >> nums[i]; // Input the elements of the array
+    }
+    nextPermutation(nums); // Call the nextPermutation function
+    // Iterate through the array and print the next permutation
+    for (int i = 0; i < n; i++) {
+        cout << nums[i] << " ";
+    }
+    cout << endl;
+    return 0;
+}
+
+Complexity O(n)
+
+

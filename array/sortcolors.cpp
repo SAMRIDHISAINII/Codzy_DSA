@@ -46,3 +46,23 @@ public:
         }
     }
 };
+
+
+0s 1s 2s
+void sortColors(vector<int>& nums) {
+    int left = 0; //pointer at the beginning of the array
+    int right = nums.size() - 1; //pointer at the end of the array
+    int cur = 0; //pointer at the current position of the array
+    while (cur <= right) { //loop until the cur pointer reach the end
+        if (nums[cur] == 0) {
+            swap(nums[cur], nums[left]); //swap the cur and left pointers
+            cur++; 
+            left++;
+        } else if (nums[cur] == 2) {
+            swap(nums[cur], nums[right]); //swap the cur and right pointers
+            right--;
+        } else {
+            cur++;
+        }
+    }
+}
